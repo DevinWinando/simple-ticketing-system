@@ -128,12 +128,15 @@
                                     @foreach ($open as $ticket)
                                         <li class="row g-0 list-group-item d-flex align-items-start py-3">
                                             <div class="hover-actions pe-2 end-0 me-3 bg-light rounded">
-                                                <button type="button" class="btn btn-link btn-sm"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Edit"><i class="fa fa-pencil"></i></button>
-                                                <button type="button" class="btn text-danger btn-link btn-sm"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Delete"><i class="fa fa-trash"></i></button>
+                                                <button type="button" class="btn btn-link btn-sm btn-edit"
+                                                    data-bs-toggle="tooltip" data-id="{{ $ticket->id }}"
+                                                    data-bs-placement="top" title="Edit"><i
+                                                        class="fa fa-pencil"></i></button>
+                                                <button type="button"
+                                                    class="btn btn-delete text-danger btn-link btn-sm"
+                                                    data-bs-toggle="tooltip" data-id="{{ $ticket->id }}"
+                                                    data-bs-placement="top" title="Delete"><i
+                                                        class="fa fa-trash"></i></button>
                                             </div>
                                             <div class="col col-md-10 col-xxl-11">
                                                 <div class="row">
@@ -174,12 +177,15 @@
                                     @foreach ($closed as $ticket)
                                         <li class="row g-0 list-group-item d-flex align-items-start py-3">
                                             <div class="hover-actions pe-2 end-0 me-3 bg-light rounded">
-                                                <button type="button" class="btn btn-link btn-sm"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Edit"><i class="fa fa-pencil"></i></button>
-                                                <button type="button" class="btn text-danger btn-link btn-sm"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Delete"><i class="fa fa-trash"></i></button>
+                                                <button type="button" class="btn btn-link btn-sm btn-edit"
+                                                    data-bs-toggle="tooltip" data-id="{{ $ticket->id }}"
+                                                    data-bs-placement="top" title="Edit"><i
+                                                        class="fa fa-pencil"></i></button>
+                                                <button type="button"
+                                                    class="btn btn-delete text-danger btn-link btn-sm"
+                                                    data-bs-toggle="tooltip" data-id="{{ $ticket->id }}"
+                                                    data-bs-placement="top" title="Delete"><i
+                                                        class="fa fa-trash"></i></button>
                                             </div>
                                             <div class="col col-md-10 col-xxl-11">
                                                 <div class="row">
