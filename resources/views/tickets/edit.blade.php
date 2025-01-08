@@ -17,6 +17,14 @@
         </div>
     </div>
     <div class="col-12">
+        <label class="form-label">Status</label>
+        <select required name="status" class="form-select">
+            <option disabled>Select</option>
+            <option @if ($ticket->status == 'open') selected @endif value="open">Open</option>
+            <option @if ($ticket->status == 'closed') selected @endif value="closed">Closed</option>
+        </select>
+    </div>
+    <div class="col-12">
         <label class="form-label">Priority</label>
         <select required name="priority" class="form-select">
             <option disabled>Select</option>
