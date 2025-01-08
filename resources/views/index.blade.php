@@ -41,7 +41,7 @@
                         <div>
                             <h5>Open Tickets</h5>
                             <p class="m-0">{{ $openCount }} <span
-                                    class="text-muted">({{ number_format(($openCount / $allCount) * 100) }}%)</span>
+                                    class="text-muted">({{ $allCount ? number_format(($openCount / $allCount) * 100) : 0 }}%)</span>
                             </p>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div>
                             <h5>Closed Tickets</h5>
                             <p class="m-0">{{ $closedCount }} <span
-                                    class="text-muted">({{ number_format(($closedCount / $allCount) * 100) }}%)</span>
+                                    class="text-muted">({{ $allCount ? number_format(($closedCount / $allCount) * 100) : 0 }}%)</span>
                             </p>
                         </div>
                     </div>
