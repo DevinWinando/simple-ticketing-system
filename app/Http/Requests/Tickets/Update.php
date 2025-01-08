@@ -22,7 +22,12 @@ class Update extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'status' => ['required', 'string', 'in:open,closed'],
+            'priority' => ['required', 'string', 'in:high,medium,low'],
+            'assigned_to' => ['required', 'exists:users,id'],
+            'due_date' => ['nullable', 'date'],
         ];
     }
 }
